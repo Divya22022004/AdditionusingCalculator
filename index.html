@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        let num1="";
+        let num2="";
+
+        function getNumber(num){
+            if(num1===""){
+                num1+=num;
+                document.getElementById("num1").value=num1;
+            }
+            else if(num2===""){
+                num2+=num;
+                document.getElementById("num2").value=num2;
+            }                 
+        }
+        function addNumbers(){
+            const result=parseInt(num1)+parseInt(num2);
+            alert(`The result is:${result}`);
+        }
+    </script>
+</head>
+<body><center>
+    <div class="button-grid">
+        <h1>Addition of two numbers</h1>
+        <button onclick="getNumber(1)">1</button>
+        <button onclick="getNumber(2)">2</button>
+        <button onclick="getNumber(3)">3</button><br>
+        <button onclick="getNumber(4)">4</button>
+        <button onclick="getNumber(5)">5</button>
+        <button onclick="getNumber(6)">6</button><br>
+        <button onclick="getNumber(7)">7</button>
+        <button onclick="getNumber(8)">8</button>
+        <button onclick="getNumber(9)">9</button><br>
+        <button onclick="getNumber(0)">0</button><br>
+        <input id="num1" type="number" placeholder="choose num1 from above"><br>
+        <input id="num2" type="number" placeholder="choose num2 from above"><br>
+        <button onclick="addNumbers()">Add</button>
+    </div></center>
+</body>
+</html>
